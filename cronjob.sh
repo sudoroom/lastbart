@@ -20,7 +20,7 @@ SECONDS=`eval $CMD`
 MIN=`echo "${SECONDS} / 60" | ${BC_CMD}`
 SEC=`echo "${SECONDS} % 60" | ${BC_CMD}`
 
-SPEECH="Last bart toward ${DESTINATION_SPEAK} is departing in ${MIN} minutes and ${SEC} seconds"
+SPEECH="Last bart toward ${DESTINATION_SPEAK} is departing in ${MIN} minutes." # and ${SEC} seconds"
 
 if (( SECONDS < LESSTHAN )) && (( SECONDS > MORETHAN )); then
 
