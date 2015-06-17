@@ -6,8 +6,8 @@ SPEAK_CMD="/usr/bin/espeak"
 BC_CMD="/usr/bin/bc"
 
 FROM_STATION="macarthur"
-DESTINATION="sf"
-DESTINATION_SPEAK="San Francisco" # How to say the destination
+DESTINATION=$1 # which destination sf fremont pittsburg richmond
+DESTINATION_SPEAK=$2 # How to say the destination
 
 LESSTHAN=1800 # begin alerting when there is less than 30 min until last BART
 MORETHAN=600 # stop alerting when there is less than 10 min until last BART
