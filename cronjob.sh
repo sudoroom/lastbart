@@ -1,8 +1,7 @@
 #!/bin/bash
 
 NODEPATH="/usr/bin/nodejs"
-LASTBARTPATH="/home/juul/projects/lastbart/lastbart.js"
-SPEAK_CMD="/usr/bin/espeak"
+LASTBARTPATH="/home/jerkey/lastbart/lastbart.js"
 BC_CMD="/usr/bin/bc"
 
 FROM_STATION="macarthur"
@@ -24,6 +23,6 @@ SPEECH="Last bart toward ${DESTINATION_SPEAK} is departing in ${MIN} minutes." #
 
 if (( SECONDS < LESSTHAN )) && (( SECONDS > MORETHAN )); then
 
-  `${SPEAK_CMD} "${SPEECH}"`
+/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?tl=en&q=${SPEECH}"
 
 fi
