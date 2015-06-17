@@ -59,6 +59,9 @@ Next BART from MacArthur station toward sf departs in 0 hours and 7 minutes [at 
 
 # Cronjob
 
+put this line in your crontab:
+*/10 * * * * /home/jerkey/lastbart/cronjob.sh sf "san francisco" ; sleep 2; /home/jerkey/lastbart/cronjob.sh fremont freemont ; sleep 2; /home/jerkey/lastbart/cronjob.sh pittsburg pittsburg ; sleep 2; /home/jerkey/lastbart/cronjob.sh richmond richmond
+
 There is an example cronjob included which, if run every ten minutes, would use text to speech to announce how long until the last BART leaves but only while the last BART departure is between 30 and 10 minutes away.
 
 The cronjob relies on espeak and bc.
