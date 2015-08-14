@@ -1,3 +1,4 @@
+![Last BART Cat](images/lastBart.png)
 
 WARNING: Untested. Use at your own risk.
 
