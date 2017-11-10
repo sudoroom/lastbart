@@ -23,6 +23,7 @@ SPEECH="Last bart toward ${DESTINATION_SPEAK} is departing in ${MIN} minutes." #
 
 if (( SECONDS < LESSTHAN )) && (( SECONDS > MORETHAN )); then
 
-/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?tl=en&q=${SPEECH}"
+SPEECHCMD="bin/speak \"${SPEECH}\""
+ssh pi@100.64.64.27 $SPEECHCMD
 
 fi
